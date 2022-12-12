@@ -10,8 +10,9 @@ public class Assigment2 {
 	// variables 
 		
 		int guess = -1;
-		int tries = 0;
+		int attempt = 0;
 		boolean correct = false;
+		
 		
 		// input
 		
@@ -26,11 +27,12 @@ public class Assigment2 {
 		while (!correct) {
 			
 			guess = keyboard.nextInt();
-			tries++;
+			attempt++;
 			
+			if (guess == secretNum) {
+				System.out.println("You WIN!");
+				break;
 			
-			if (tries > 6 - 2) {
-				System.out.println("You Lose! Please Try Again");
 			}
 			else if (guess < secretNum) {
 				System.out.println("Please pick a Higher Number:");
@@ -38,21 +40,26 @@ public class Assigment2 {
 			else if (guess > secretNum) {
 				System.out.println("Please pick a Lower Number:");
 				
-			}
+			} 
 			
-			if (guess == secretNum) {
-				System.out.println("You WIN!");
 			
-			}
+			if (attempt == 5) {
+				System.out.println("You Lose! Please Try Again");
+			break;
+			
+			
+			} 
 		
 			
-			
+			else if (guess < 0 || guess > 100){
+				System.out.println("Please enter a number between 0 and 100");
+				attempt--;
 	
 	 
 		}
 	
 	  }
 	}
-
+}
 
 	
