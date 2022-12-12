@@ -20,20 +20,17 @@ public class Assigment2 {
 		int secretNum = rand.nextInt(100) + 1;
 		
 		System.out.println("Guess a number between 0 and 100:");
+		System.out.println(secretNum);
 		
 		
 		while (!correct) {
 			
 			guess = keyboard.nextInt();
 			tries++;
-			if (tries > 4) {
-				System.out.println("You lose, the number to guess was " + secretNum);
-				break;
-			}
 			
-			if (guess == secretNum) {
-				correct = true;
-				System.out.println("You WIN!");
+			
+			if (tries > 6 - 2) {
+				System.out.println("You Lose! Please Try Again");
 			}
 			else if (guess < secretNum) {
 				System.out.println("Please pick a Higher Number:");
@@ -43,12 +40,19 @@ public class Assigment2 {
 				
 			}
 			
+			if (guess == secretNum) {
+				System.out.println("You WIN!");
 			
-		}
+			}
+		
+			
+			
 	
 	 
+		}
 	
+	  }
 	}
-}
+
 
 	
