@@ -20,7 +20,7 @@ public class Assigment2 {
 		Random rand = new Random();
 		int secretNum = rand.nextInt(100) + 1;
 		
-		System.out.println("Guess a number between 0 and 100:");
+		System.out.println("Guess a number between 1 and 100:");
 		System.out.println(secretNum);
 		
 		
@@ -51,8 +51,8 @@ public class Assigment2 {
 			} 
 		
 			
-			else if (guess < 0 || guess > 100){
-				System.out.println("Please enter a number between 0 and 100");
+			else if (guess <= 0 || guess > 100){
+				System.out.println("Please enter a number between 1 and 100");
 				attempt--;
 	
 	 
