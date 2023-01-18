@@ -3,6 +3,7 @@ package assigment2;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Assigment2 {
 	
 	public static void main(String [] args) {
@@ -11,7 +12,6 @@ public class Assigment2 {
 		
 		int guess = -1;
 		int attempt = 0;
-		boolean correct = false;
 		
 		
 		// input
@@ -24,7 +24,7 @@ public class Assigment2 {
 		System.out.println(secretNum);
 		
 		
-		while (!correct) {
+		while (attempt < 5) {
 			
 			guess = keyboard.nextInt();
 			attempt++;
